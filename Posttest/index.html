@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Signika&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section{
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox']:checked ~ .bar{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+input[type='checkbox']:checked ~ .bar::before{
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+input[type='checkbox']:checked ~ ul{
+    display:flex;
+}
+
+header .logo{
+    font-size: 1.5rem;
+    color:white;
+    font-weight: 500;
+}
+
+header ul {
+    display:flex;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 2rem;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    color:white;
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.1 linear;
+}
+
+header ul li a:hover::before,
+header ul li a:active::before {
+    width: 50%;
+}
+
+.bar{
+    display: none;
+    position: relative;
+    top: 5px;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+}
+
+.bar::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+}
+
+main {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('gambar2.jpg') no-repeat center center / cover;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+main h1{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+main h2{
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+} 
+
+.footer{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    background: black;
+    color: white;
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+}
+
+
+@media (max-width: 1000px) {
+    header{
+        padding: 20px 50px;
+    }
+
+    main{
+        padding-left: 5vw;
+    }
+}
+
+
+@media (max-width: 700px){
+    header{
+        padding: 20px 20px;
+    }
+
+        main h1{
+        font-size: 1rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+
+    main h2{
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    
+    header ul{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 35vh;
+        top: 60px;
+        left: 0;
+        z-index: 100;
+        background-color: white;
+    }
+
+    header ul li{
+        margin: 1rem;
+    }
+
+    header ul li a{
+        color: black;
+    }
+
+    header ul li a::before{
+        background-color: black;
+    }
+
+    .bar{
+        display: block;
+    }
+}
