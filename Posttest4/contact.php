@@ -14,11 +14,11 @@
             <h1 class="logo">My Portofolio</h1>
             <input type="checkbox" id="check">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About Me</a></li>
                 <li><a href="#">Portofolio</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
             <label for="check" class="bar"></label>
             <img src="light.png" id="icon">
@@ -42,7 +42,7 @@
 
                     </div>
 
-                    <form action="output.html" method="post">
+                    <form action="output.php" method="post">
                         <input type="text" name="name" placeholder="Nama" class="box">
                         <input type="email" name="mail" placeholder="E-Mail" class="box">
                         <input type="tel" name="telpon" placeholder="Telp : 0000-0000-0000" class="box" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}">
